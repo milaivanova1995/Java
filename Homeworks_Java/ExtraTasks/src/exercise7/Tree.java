@@ -15,7 +15,7 @@ public class Tree {
 	
 	public Tree addChild(int data) {
 		Tree child = new Tree(data);
-		this.parent = child.parent;
+		child.parent = this;
 		this.children.add(child);
 		return child;
 	}
@@ -26,14 +26,12 @@ public class Tree {
 		}
 		if (node.parent == null) {
 			System.out.print(node.data + " ");
-			for (int i = 0; i < node.children.size(); i++) {
-				System.out.print(node.children.get(i).data + " ");
-			}
-		} else {
-			for (int i = 0; i < node.children.size(); i++) {
-				System.out.print(node.children.get(i).data + " ");
-			}
 		}
+		
+		for (int i = 0; i < node.children.size(); i++) {
+			System.out.print(node.children.get(i).data + " ");
+		}
+		
 		for (int i = 0; i < node.children.size(); i++) {
 			bfs(node.children.get(i));
 		}
