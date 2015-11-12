@@ -6,7 +6,7 @@ public abstract class Horse {
 	public Horse() {}
 	
 	public void moving() {
-		moving.move();
+		this.moving.move();
 	}
 
 	public void setMoving(Movable moving) {
