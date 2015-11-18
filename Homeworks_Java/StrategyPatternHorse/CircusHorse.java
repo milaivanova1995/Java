@@ -3,7 +3,7 @@ package StrategyPatternHorse;
 public class CircusHorse extends Horse {
 	
 	public CircusHorse() {
-		moving = new Piaffe();
+		this.moving = new Piaffe();
 	}
 
 	public void display() {
